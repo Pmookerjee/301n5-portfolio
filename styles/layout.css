@@ -1,26 +1,12 @@
 
-/*@media screen and (max-height: 450px) {
-    .sidenav {
-      padding-top: 3em;
-    }
-
-    .hero {
-      height: 15em;
-    }
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-}*/
+}
 
 
 
 @media screen and (max-width: 700px){
-
-  .sidenav, .hero {
-    height: 40%;
-  }
-
-  .sidenav {
-    padding-bottom: 3em;
-  }
 
    .boxes {
      display: none;
@@ -43,9 +29,6 @@
       display: none;
     }
 
-    .sidenav {
-      padding-bottom: 5em;
-    }
     .boxes {
       display: flex;
       flex-wrap: wrap;

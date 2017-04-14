@@ -2,45 +2,48 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" href="css/base.css" rel="stylesheet">
-  <link type="text/css" href="css/layout.css" rel="stylesheet">
-  <link type="text/css" href="css/modules.css" rel="stylesheet">
+  <link type="text/css" href="styles/base.css" rel="stylesheet">
+  <link type="text/css" href="styles/layout.css" rel="stylesheet">
+  <link type="text/css" href="styles/modules.css" rel="stylesheet">
   <!-- <link type="text/css" href="css/reset.css" rel="stylesheet"> -->
+  <script src="https://use.fontawesome.com/38937c3e45.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link type="text/css" href="css/hamburgers.css" rel="stylesheet">
+  <!-- <link type="text/css" href="css/hamburgers.css" rel="stylesheet"> -->
   <script type="text/x-handlebars-template" id="welcome">{{welcome}}</script>
   <script type="text/x-handlebars-template" id="about">{{about}}</script>
   <script type="text/x-handlebars-template" id="invitation">{{invitation}}</script>
 </head>
 <body>
-  <header>
-
-    <nav>
-      <button class="hamburger hamburger--spin is-active" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-    </nav>
-  </header>
   <main>
     <section class="hero">
+      <header>
+        <nav>
+          <i id="menu" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+          <div id="navDrawer" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn"</a>
+              <a href="#">About</a>
+              <a href="#">Fun and Games</a>
+              <a href="#">Resources</a>
+              <a href="#">Contact</a>
+            </div>
+          </nav>
+        </header>
         <h1 id="fadeIn"></h1>
         <h3 id="one"></h3>
         <h3 id="two"></h3>
         <h3 id="three"></h3>
-    </section>
-  <section class = "projects">
-      <button class="show-projects" type="button">Projects</button>
-      <article class="boxes"><img class="box-photo" src="assets/cat.jpg"></article>
-      <article class="boxes"><img class="box-photo" src="assets/cat.jpg"></article>
-      <article class="boxes"><img class="box-photo" src="assets/cat.jpg"></article>
-      <article class="boxes"><img class="box-photo" src="assets/cat.jpg"></article>
-    </section>
-  </main>
-  <footer></footer>
-  <script src="vendor/jquery-3.2.0.js" type="text/javascript"></script>
-  <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.5.js"></script>
-  <script src="app.js" type="text/javascript"></script>
-</body>
-</html>
+      </section>
+      <section class = "projects">
+        <button class="show-projects" type="button">Projects</button>
+        <article class="boxes"><img class="box-photo" src="assets/cat.jpg"></article>
+        <article class="boxes"><img class="box-photo" src="assets/cat.jpg"></article>
+        <article class="boxes"><img class="box-photo" src="assets/cat.jpg"></article>
+        <article class="boxes"><img class="box-photo" src="assets/cat.jpg"></article>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="vendor/jquery-3.2.0.js" type="text/javascript"></script>
+    <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.5.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+  </html>
