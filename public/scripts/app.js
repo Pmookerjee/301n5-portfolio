@@ -22,20 +22,6 @@ function Project(name, description, url, photo) {
   })
 });
 
-//   $(() => {
-//   $.ajax({
-//     url: '/data/notes.json'
-//   }).done(function(data) {
-//     console.log('request done: ' + Date.now());
-//     data.forEach((note) => {
-//       $('#notes').append(`<li>${note.body}</li>`);
-//     });
-//   });
-//   console.log('request started: ' + Date.now());
-// });
-//
-// }) ()
-
 var showProjects = function() {
   var $button = $(this);
   $button.addClass('hidden');
