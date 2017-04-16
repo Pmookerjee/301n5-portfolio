@@ -1,23 +1,23 @@
 [
   {
-    "name": "cats",
-    "description": "Cats are king, and you know it",
-    "url": "someurl",
-    "photo": "cat.jpg"
+    "name": "Fantastic Beers And Where To Find Them",
+    "description": "A Beer Picker App",
+    "url": "https://pmookerjee.github.io/201_Final_Project/",
+    "photo": "beer_picker.png"
   },
 
   {
-    "name": "cats",
+    "name": "Bus Mall",
     "description": "Cats are king, and you know it",
-    "url": "someurl",
-    "photo": "cat.jpg"
+    "url": "https://pmookerjee.github.io/bus-mall/",
+    "photo": "busmall.png"
   },
 
   {
-    "name": "cats",
-    "description": "Cats are king, and you know it",
-    "url": "someurl",
-    "photo": "cat.jpg"
+    "name": "Pat's Salmon Cookie Stand",
+    "description": "",
+    "url": "https://pmookerjee.github.io/cookie-stand/index.html",
+    "photo": "cookie_stand.png"
   },
 
   {

@@ -1,9 +1,5 @@
 'use strict';
 
-var projects = [];
-
-
-
 function Project(name, description, url, photo) {
   this.name = name;
   this.description = description;
@@ -11,22 +7,43 @@ function Project(name, description, url, photo) {
   this.photo = photo;
 }
 
-(() => {
+Project.all = [];
 
-  $.ajax({
-    url: 'project_file.json',
-  }).done(function(data) {
-    for(var x in data) {
-      projects[x] = new Project(data[x].name, data[x].description, data[x].url, data[x].photo);
-    }
+Project.prototype.toHtml = function() {
+  let template = Handlebars.compile($('#project-template').text());
+  return template(this);
+};
+
+Project.load = function(projectData){
+  projectData.forEach(function(prop) {
+    Project.all.push(new Project(prop));
   })
-});
+}
+
+Project.fetch = function() {
+  if(localStorage.projectData){
+    Project.load(JSON.parse(localStorage.projectData));
+    projectView.initIndexPage();
+  } else {
+    (() => {
+      $.ajax({
+        url: '/data/project_file.json',
+      }).done(function(data) {
+        localStorage.setItem('projectData', JSON.stringify(data));
+        Project.load(JSON.parse(localStorage.projectData));
+        projectView.initIndexPage();
+      })
+    });
+  }
+}
 
 var showProjects = function() {
   var $button = $(this);
   $button.addClass('hidden');
   $('.boxes').fadeIn().addClass('show');
 }
+
+
 
 var slideMenu = function() {
 
