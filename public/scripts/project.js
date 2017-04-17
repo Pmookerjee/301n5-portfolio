@@ -1,10 +1,10 @@
 'use strict';
 
-function Project(name, description, url, photo) {
+function Project(name, description, url, backgroundimage) {
   this.name = name;
   this.description = description;
   this.url = url;
-  this.photo = photo;
+  this.backgroundimage = backgroundimage;
 }
 
 Project.all = [];
@@ -15,8 +15,9 @@ Project.prototype.toHtml = function() {
 };
 
 Project.load = function(projectData){
-  projectData.forEach(function(prop) {
-    Project.all.push(new Project(prop));
+  projectData.forEach(function(proj) {
+    console.log(proj);
+    Project.all.push(new Project(proj));
   })
 }
 
@@ -25,15 +26,32 @@ Project.fetch = function() {
     Project.load(JSON.parse(localStorage.projectData));
     projectView.initIndexPage();
   } else {
-    (() => {
-      $.ajax({
-        url: '/data/project_file.json',
-      }).done(function(data) {
-        localStorage.setItem('projectData', JSON.stringify(data));
-        Project.load(JSON.parse(localStorage.projectData));
-        projectView.initIndexPage();
-      })
-    });
+    $.ajax({
+      url: './data/project_file.json',
+      dataType: 'json',
+      error: function (jqXHR, exception) {
+        var msg = '';
+        if (jqXHR.status === 0) {
+          msg = 'Cannot connect.\n Verify Network.';
+        } else if (jqXHR.status === 404) {
+          msg = 'Requested page not found. [404]';
+        } else if (exception === 'parsererror') {
+          msg = 'Requested JSON parse failed.';
+        } else if (exception === 'timeout') {
+          msg = 'Time out error.';
+        } else if (exception === 'abort') {
+          msg = 'Ajax request aborted.';
+        } else {
+          msg = 'Uncaught Error.\n' + jqXHR.responseText;
+        }
+        console.log(msg);
+      },
+    }).done(function(data) {
+      localStorage.setItem('projectData', JSON.stringify(data));
+      // console.log('local storage data: ' + localStorage.projectData);
+      Project.load(JSON.parse(localStorage.projectData));
+      projectView.initIndexPage();
+    })
   }
 }
 
