@@ -16,8 +16,7 @@ Project.prototype.toHtml = function() {
 
 Project.load = function(projectData){
   projectData.forEach(function(proj) {
-    console.log(proj);
-    Project.all.push(new Project(proj));
+    Project.all.push(new Project(proj.name, proj.description, proj.url, proj.backgroundimage));
   })
 }
 
@@ -26,6 +25,8 @@ Project.fetch = function() {
     Project.load(JSON.parse(localStorage.projectData));
     projectView.initIndexPage();
   } else {
+    console.log('there is no local storage data already');
+
     $.ajax({
       url: './data/project_file.json',
       dataType: 'json',
@@ -48,7 +49,7 @@ Project.fetch = function() {
       },
     }).done(function(data) {
       localStorage.setItem('projectData', JSON.stringify(data));
-      // console.log('local storage data: ' + localStorage.projectData);
+      console.log('local storage data: ' + localStorage.projectData);
       Project.load(JSON.parse(localStorage.projectData));
       projectView.initIndexPage();
     })
