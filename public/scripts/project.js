@@ -30,22 +30,22 @@ Project.fetch = function() {
     $.ajax({
       url: './data/project_file.json',
       dataType: 'json',
-      error: function (jqXHR, exception) {
-        var msg = '';
-        if (jqXHR.status === 0) {
-          msg = 'Cannot connect.\n Verify Network.';
-        } else if (jqXHR.status === 404) {
-          msg = 'Requested page not found. [404]';
-        } else if (exception === 'parsererror') {
-          msg = 'Requested JSON parse failed.';
-        } else if (exception === 'timeout') {
-          msg = 'Time out error.';
-        } else if (exception === 'abort') {
-          msg = 'Ajax request aborted.';
-        } else {
-          msg = 'Uncaught Error.\n' + jqXHR.responseText;
-        }
-        console.log(msg);
+      function (err) {
+        // var msg = '';
+        // if (jqXHR.status === 0) {
+        //   msg = 'Cannot connect.\n Verify Network.';
+        // } else if (jqXHR.status === 404) {
+        //   msg = 'Requested page not found. [404]';
+        // } else if (exception === 'parsererror') {
+        //   msg = 'Requested JSON parse failed.';
+        // } else if (exception === 'timeout') {
+        //   msg = 'Time out error.';
+        // } else if (exception === 'abort') {
+        //   msg = 'Ajax request aborted.';
+        // } else {
+        //   msg = 'Uncaught Error.\n' + jqXHR.responseText;
+        // }
+        console.error(err)
       },
     }).done(function(data) {
       localStorage.setItem('projectData', JSON.stringify(data));
@@ -155,4 +155,9 @@ function closeNav() {
 $('#menu').on('click', function(e) {
   e.preventDefault();
   openNav();
+});
+
+$('#closebtn').on('click', function(e) {
+  e.preventDefault();
+  closeNav();
 });

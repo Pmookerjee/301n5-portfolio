@@ -89,7 +89,7 @@
 }
 
  .show {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
   max-width: 50%;
   max-height: 25%;
