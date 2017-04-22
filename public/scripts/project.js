@@ -118,7 +118,7 @@ $(function () {
 
   setTimeout(function(){
     $('#two').fadeOut('slow');
-  }, 15000);
+  }, 13000);
 
   setTimeout(function() {
     setInterval(function(){
@@ -127,14 +127,14 @@ $(function () {
       index3++;
 
     }, 100);
-  }, 18000);
+  }, 15000);
 
   setTimeout(function(){
     $('#three').fadeOut('slow');
-  }, 24500);
+  }, 20000);
 
   setTimeout(function() {
-    $('#fadeIn').fadeIn();
+    $('#fadeIn').addClass('gradient').fadeIn();
   }, 27000);
 
 });
@@ -142,14 +142,16 @@ $(function () {
 function openNav() {
   document.getElementById("navDrawer").style.width = "250px";
   // document.getElementById("main").style.marginLeft = "250px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  document.body.style.backgroundColor = "black";
+  $('.hide-class').hide();
+  $('#fadeIn').text('').css('color', 'black');
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 function closeNav() {
   document.getElementById("navDrawer").style.width = "0";
   // document.getElementById("main").style.marginLeft = "0";
-  document.body.style.backgroundColor = "white";
+  document.body.style.backgroundColor = "black";
 }
 
 $('#menu').on('click', function(e) {
