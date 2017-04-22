@@ -28,7 +28,7 @@
   color: white;
 }
 
-.projects {
+/*.projects {
   width: inherit;
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +37,7 @@
   padding: 0;
   height: 25em;
   background-color: black;
-}
+}*/
 
 .fa-bars {
   font-size: 10em;
@@ -45,23 +45,23 @@
   padding: 1em 0 4.2em .8em;
 }
 
- .show {
+ /*.show {
   display: flex !important;
   flex-wrap: wrap;
   max-width: 50%;
   max-height: 25%;
   /*width: 50%;
   height: 50%;*/
-}
 
-.box-photo {
+
+/*.box-photo {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
   max-height: inherit;
-}
+}*/
 
-.project-name {
+/*.project-name {
   display: flex;
   flex-wrap: wrap;
     font-size: .7em;
@@ -70,7 +70,7 @@
     padding-top: .5em;
     padding-bottom: .6em;
     padding-left: .4em;
-}
+}*/
 
 .hidden {
   display: none;
