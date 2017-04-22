@@ -1,0 +1,30 @@
+{
+  "name": "paula-mookerjee-portfolio",
+  "version": "0.1.0",
+  "description": "A site with my code fellows projects",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "live-server": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pmookerjee/301n5-portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "codeschool",
+    "301n5"
+  ],
+  "author": "Paula Mookerjee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pmookerjee/301n5-portfolio/issues"
+  },
+  "homepage": "https://github.com/Pmookerjee/301n5-portfolio#readme"
+}

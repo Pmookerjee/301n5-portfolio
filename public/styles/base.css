@@ -1,5 +1,6 @@
 body {
   padding: 0;
+  background-color: black;
 }
 
 header {
@@ -7,9 +8,9 @@ header {
   width: inherit;
 }
 
-article {
+/*article {
   display: flex;
-}
+}*/
 
 /*nav {
   display: flex;
