@@ -20,12 +20,13 @@
    }
 
 /*float: absolute left/right*/
-   .projects {
-     box-sizing: border-box;
-     width: 100%;
-     position: relative;
-     display: flex;
-   }
+
+.projects {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
 
    .box-photo {
      display: inline-block;
@@ -107,6 +108,18 @@
       flex-direction: row;
     }
 
+
+    .projects {
+      box-sizing: border-box;
+      width: 100%;
+      position: relative;
+      display: flex;
+    }
+
+    .boxes {
+      padding: .2em;
+    }
+
     .sidenav a {
       display: inline;
 
@@ -120,14 +133,11 @@
 
 
     .project-name {
-      font-size: .2em;
-      color: pink;
-    }
-
-    .boxes {
-      display: flex;
-      flex-wrap: wrap;
-      height: 100%:
+      text-align: center;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      font-size: .8em;
+      color: white;
     }
 
     .fa-bars {
