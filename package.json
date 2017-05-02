@@ -5,7 +5,8 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.15.2",
-    "live-server": "^1.2.0"
+    "live-server": "^1.2.0",
+    "page.js": "^4.13.3"
   },
   "devDependencies": {},
   "scripts": {

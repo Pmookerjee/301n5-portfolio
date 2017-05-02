@@ -25,7 +25,6 @@ Project.fetch = function() {
     Project.load(JSON.parse(localStorage.projectData));
     projectView.initIndexPage();
   } else {
-    console.log('no previous local storage')
     $.ajax({
 
       url: './data/project_file.json',
@@ -35,7 +34,6 @@ Project.fetch = function() {
       },
     }).done(function(data) {
       localStorage.setItem('projectData', JSON.stringify(data));
-      console.log('data from json file is: ' + JSON.stringify(data));
       Project.load(JSON.parse(localStorage.projectData));
       projectView.initIndexPage();
     })
@@ -99,12 +97,12 @@ $(function () {
       $('#two').append(script[index2]);
       index2++;
 
-    }, 100);
-  }, 9000);
+    }, 80);
+  }, 11000);
 
   setTimeout(function(){
     $('#two').fadeOut('slow');
-  }, 13000);
+  }, 16000);
 
   setTimeout(function() {
     setInterval(function(){
@@ -113,11 +111,11 @@ $(function () {
       index3++;
 
     }, 100);
-  }, 15000);
+  }, 23000);
 
   setTimeout(function(){
     $('#three').fadeOut('slow');
-  }, 20000);
+  }, 26000);
 
   setTimeout(function() {
     $('#fadeIn').addClass('gradient').fadeIn();

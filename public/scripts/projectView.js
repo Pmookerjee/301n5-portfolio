@@ -8,3 +8,7 @@ projectView.initIndexPage = function() {
     $('#project').append(project.toHtml());
   });
 }
+
+$(function(){
+  $(".boxes").glow({ radius: "10", color:"white"});
+})
