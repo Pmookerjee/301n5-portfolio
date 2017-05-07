@@ -21,31 +21,10 @@
   },
 
   {
-    "name": "cats",
-    "description": "Cats are king, and you know it",
-    "url": "someurl",
-    "backgroundimage": "public/assets/cat.jpg"
-  },
-
-  {
-    "name": "cats",
-    "description": "Cats are king, and you know it",
-    "url": "someurl",
-    "backgroundimage": "public/assets/cat.jpg"
-  },
-
-  {
-    "name": "cats",
-    "description": "Cats are king, and you know it",
-    "url": "someurl",
-    "photo": "public/assets/cat.jpg"
-  },
-
-  {
-    "name": "cats",
-    "description": "Cats are king, and you know it",
-    "url": "someurl",
-    "photo": "public/assets/cat.jpg"
+    "name": "Chocolate Pizza",
+    "description": "",
+    "url": "https://pmookerjee.github.io/chocolate-pizza/",
+    "backgroundimage": "assets/chocolate_pizza.png"
   }
 
 ]

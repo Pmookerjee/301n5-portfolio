@@ -1,10 +1,20 @@
 'use strict';
 
-const projectView = {};
+((module) => {
 
-projectView.initIndexPage = function() {
+  const projectView = {};
 
-  Project.all.forEach(function(project) {
-    $('#project').append(project.toHtml());
-  });
-}
+  projectView.initIndexPage = function() {
+
+    Project.all.forEach(function(project) {
+      $('#project').append(project.toHtml());
+    });
+  }
+
+  $(function(){
+    $(".boxes").glow({ radius: "10", color:"white"});
+  })
+
+  module.projectView = projectView;
+
+})(window)

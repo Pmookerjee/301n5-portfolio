@@ -9,20 +9,21 @@
 
 @media screen and (max-width: 700px){
 
-   .boxes {
-     display: none;
+   .show {
+   /*width: 48%;*/
+   display: flex;
+   flex-direction: row;
+   padding-left: 1%;
+   padding-right: 1%%;
+   padding-top: 1.2em;
+}
+   .box-photo {
+     display: inline-block;
+     max-width: 100%;
+     max-height: inherit;
    }
 
-   .show-projects {
-     margin: 0 auto;
-     background: none;
-     border: none;
-     outline: none;
-     color: white;
-     font-family: 'Montserrat', sans-serif;
-     font-size: 1em;
-     z-index: 99999999;
-   }
+
 
    .sidenav {
       /* 100% Full-height */
@@ -61,15 +62,6 @@
            font-size: 36px;
            margin-left: 50px;
        }
-   .show-projects {
-     margin: 0 auto;
-     background: none;
-     border: none;
-     outline: none;
-     color: white;
-     font-family: 'Montserrat', sans-serif;
-     font-size: 1em;
-   }
 }
 
 /***************Full Screen****************/
@@ -78,36 +70,47 @@
     .show-projects {
       display: none;
     }
-    .sidenav {
-      width: 100%;
-      max-width: 100%;
-      padding-bottom: 5em;
+
+    nav, div#navDrawer {
       display: flex;
-      justify-content: space-between;
+      height: 0;
+      /*padding-bottom: 5em;*/
+      justify-content: space-around;
       flex-direction: row;
     }
 
-    .sidenav a {
-      display: inline;
+    .boxes {
+      width: 46%;
+      display: flex;
+      flex-direction: row;
+      /*border: 1px solid #18110E;*/
+      padding-left: 3%;
+      padding-right: 1%%;
+      padding-top: 1.4em;
+       /*padding: .5em;*/
+    }
 
-          color: white;
+    .sidenav a {
+          color: lightgray;
           width: 100%;
           margin: 10% 20% 0 20%;
           text-decoration: none;
-          padding-left: 2em;
+          padding-left: 3em;
 
+    }
+
+    .sidenav a:hover {
+      color: white;
+      text-decoration: none;
     }
 
 
     .project-name {
-      font-size: .2em;
-      color: pink;
-    }
-
-    .boxes {
-      display: flex;
-      flex-wrap: wrap;
-      height: 100%:
+      text-align: center;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      font-size: .8em;
+      color: white;
     }
 
     .fa-bars {
@@ -122,4 +125,3 @@
      width: 100%;
      height: relative;
    }
-}

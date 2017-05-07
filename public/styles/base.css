@@ -4,8 +4,9 @@ body {
 }
 
 header {
-  position: fixed;
-  width: inherit;
+  /*position: fixed;*/
+  position: absolute;
+  /*width: inherit;*/
 }
 
 /*article {
