@@ -3,10 +3,11 @@
 (function(module) {
   const reposController = {};
 
-  reposController.index = () => {
+  reposController.showRepos = () => {
     $('section#about').hide();
     $('section#project').hide();
-    $('section#resources').show().siblings().hide();
+    $('section#repos').show();
+
     repos.requestRepos(repoView.index);
   };
   module.reposController = reposController;
