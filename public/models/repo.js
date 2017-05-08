@@ -3,9 +3,10 @@
 (function(module) {
   const repos = {};
 
-  repos.all = [];
+
 
   repos.requestRepos = function(callback) {
+    repos.all = [];
     $.get('https://api.github.com/user?access_token=' + window.gitToken)
       .then(user => {
         $.get(user.repos_url + '?access_token=' + window.gitToken)

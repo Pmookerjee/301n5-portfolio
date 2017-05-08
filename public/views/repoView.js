@@ -4,9 +4,7 @@
   const repoView = {};
 
   const ui = function() {
-    let $repo_section = $('section#repos'); // Best practice: Cache the DOM query if it's used more than once.
-
-    $repo_section.find('ul').html(' ');
+    $('ul.repo_ul').empty();
   };
 
   var source   = $("#repo-template").text();
