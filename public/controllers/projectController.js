@@ -5,6 +5,7 @@
 
   projectController.showProjects = () => {
     $('section#about').hide();
+    $('section#repos').hide();
     $('section#project').show();
 
   }

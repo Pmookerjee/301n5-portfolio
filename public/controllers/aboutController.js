@@ -5,9 +5,8 @@
 
   aboutController.showAbout = () => {
     $('section#project').hide();
+    $('section#repos').hide();
     $('section#about').show();
-
-
   }
 
   module.aboutController = aboutController;

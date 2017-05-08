@@ -105,3 +105,27 @@ background: -webkit-linear-gradient(white, blue);
 .sidenav a:active {
   color: white;
 }
+
+.repo_h2 {
+  text-align: center;
+  color: lightgray;
+}
+
+.repo_ul{
+  text-align: center;
+  color: lightgray;
+  list-style: none;
+
+}
+
+.repo_ul h3 {
+  color: white;
+}
+
+.repo_ul a {
+  text-decoration: none;
+}
+
+.repo_ul li {
+  padding-top: 1.5em;
+}
