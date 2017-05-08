@@ -20,7 +20,7 @@
    .box-photo {
      display: inline-block;
      max-width: 100%;
-     max-height: inherit;
+     /*max-height: inherit;*/
    }
 
 

@@ -28,8 +28,7 @@
       projectView.initIndexPage();
     } else {
       $.ajax({
-
-        url: './data/project_file.json',
+        url: 'project_file.json',
         dataType: 'json',
         function (err) {
           console.error(err)
