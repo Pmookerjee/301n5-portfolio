@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Fantastic Beers And Where To Find Them",
+    "description": "A Beer Picker App",
+    "url": "https://pmookerjee.github.io/201_Final_Project/",
+    "backgroundimage": "assets/beer_picker.png"
+  },
+
+  {
+    "name": "Bus Mall",
+    "description": "Cats are king, and you know it",
+    "url": "https://pmookerjee.github.io/bus-mall/",
+    "backgroundimage": "assets/busmall.png"
+  },
+
+  {
+    "name": "Pat's Salmon Cookie Stand",
+    "description": "",
+    "url": "https://pmookerjee.github.io/cookie-stand/index.html",
+    "backgroundimage": "assets/cookie_stand.png"
+  },
+
+  {
+    "name": "Chocolate Pizza",
+    "description": "",
+    "url": "https://pmookerjee.github.io/chocolate-pizza/",
+    "backgroundimage": "assets/chocolate_pizza.png"
+  }
+
+]
