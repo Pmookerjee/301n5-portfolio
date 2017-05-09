@@ -3,10 +3,11 @@
 (function(module) {
   const repos = {};
 
+  repos.all = [];
 
 
   repos.requestRepos = function(callback) {
-    repos.all = [];
+
     $.get('/github/user/repos')
     .then(data => repos.all = data, err => console.error(err)) // es6 syntax arrow functions
     .then(callback);
