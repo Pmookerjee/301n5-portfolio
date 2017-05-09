@@ -12,7 +12,7 @@
 
   repoView.index = function() {
     ui();
-    $('ul.repo_ul').append(
+    $('section#repos').append(
       repos.with('name').map(render)
     );
   };
