@@ -18,7 +18,7 @@
     //         results.forEach(repo => {
     //           repos.all.push(repo);
     //         })
-    callback(repos.all);
+    callback(repos);
       //     }, error => {
       //       console.log(error);
       //     });
