@@ -12,8 +12,7 @@
 
   repoView.index = function() {
     ui();
-    console.log('in the repoView.index()');
-    ('ul.repo_ul').append(
+    $('ul.repo_ul').append(
       repos.with('name').map(render)
     );
   };
