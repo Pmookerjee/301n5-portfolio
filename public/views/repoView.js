@@ -16,7 +16,6 @@
       var html = render(repo);
       $('section#repos').append(html);
     })
-
   };
 
   module.repoView = repoView;
