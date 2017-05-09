@@ -12,10 +12,7 @@
 
   repoView.index = function() {
     ui();
-    repos.forEach(function(repo) {
-      var html = render(repo);
-      $('section#repos').append(html);
-    })
+    repos.with('name').map(render)
   };
 
   module.repoView = repoView;
