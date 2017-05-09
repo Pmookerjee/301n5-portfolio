@@ -29,8 +29,8 @@
       projectView.initIndexPage();
     } else {
       $.ajax({
-        url: 'project_file.json',
-        dataType: 'json',
+        url: "project_file.json",
+        dataType: "json",
         error: function (jqXHR, exception) {
         var msg = '';
         if (jqXHR.status === 0) {
