@@ -10,7 +10,7 @@
   var source   = $("#repo-template").text();
   var render = Handlebars.compile(source);
 
-  repoView.index = function(repos) {
+  repoView.index = function() {
     ui();
     repos.forEach(function(repo) {
       var html = render(repo);
