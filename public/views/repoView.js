@@ -12,7 +12,7 @@
 
   repoView.index = function() {
     ui();
-    repos.with('name').map(render)
+    repos.with('name').map(render);
   };
 
   module.repoView = repoView;
