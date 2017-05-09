@@ -13,7 +13,9 @@
   repoView.index = function() {
     ui();
     console.log('in the repoView.index()');
-    repos.with('name').map(render);
+    ('ul.repo_ul').append(
+      repos.with('name').map(render)
+    );
   };
 
   module.repoView = repoView;
