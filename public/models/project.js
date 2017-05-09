@@ -24,16 +24,34 @@
 
   Project.fetch = function() {
     if(localStorage.projectData){
+      console.log('in the local storage already exists part')
       Project.load(JSON.parse(localStorage.projectData));
       projectView.initIndexPage();
     } else {
       $.ajax({
         url: 'project_file.json',
         dataType: 'json',
-        function (err) {
-          console.error(err)
+        error: function (jqXHR, exception) {
+        var msg = '';
+        if (jqXHR.status === 0) {
+            msg = 'Not connect.\n Verify Network.';
+        } else if (jqXHR.status == 404) {
+            msg = 'Requested page not found. [404]';
+        } else if (jqXHR.status == 500) {
+            msg = 'Internal Server Error [500].';
+        } else if (exception === 'parsererror') {
+            msg = 'Requested JSON parse failed.';
+        } else if (exception === 'timeout') {
+            msg = 'Time out error.';
+        } else if (exception === 'abort') {
+            msg = 'Ajax request aborted.';
+        } else {
+            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+        }
+          console.log(msg);
         },
       }).done(function(data) {
+        console.log('in the done function')
         localStorage.setItem('projectData', JSON.stringify(data));
         Project.load(JSON.parse(localStorage.projectData));
         projectView.initIndexPage();

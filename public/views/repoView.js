@@ -12,6 +12,7 @@
 
   repoView.index = function() {
     ui();
+    console.log(repos);
     repos.with('name').map(render);
   };
 
